@@ -1,0 +1,16 @@
+[
+	{
+		"id": 0,
+		"name" : "2WD",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1OaNNRpEr5HX7XjZ-9mverxdG-oX1ulBM",
+    "comment" : "2WD는 효율이 좋아요! 효율을 중시한다면, 탁월한 선택입니다."
+	},
+	{
+		"id": 1,
+		"name" : "4WD",
+		"price" : 2370000,
+		"image_src" : "https://drive.google.com/uc?id=1I-p2PNJqrO63jWUoZvc6F2zG2YyS_7CA",
+    "comment" : "4WD는 파워풀해요! 힘있는 주행을 원하신다면, 탁월한 선택입니다."
+	}
+]

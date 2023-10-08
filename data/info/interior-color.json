@@ -1,0 +1,18 @@
+[
+	{
+		"id": 0,
+		"name" : "퀄팅천연(블랙)",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1kJdy3kwL4WbLOFwZRHkYP1f21sedVPFP",
+    "icon_src" : "https://drive.google.com/uc?id=1WYPZbC9lCYQjiGnL4L4LeVVuGKY8EoIC",
+    "comment" : "블랙 컬러는 클래식한 분위기에요! 클래식한 분위기를 원하신다면, 탁월한 선택입니다."
+	},
+	{
+		"id": 1,
+		"name" : "쿨그레이",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1Wm2oOI4Yf7P5pUet89eAOuHLjxz4A6Pj",
+    "icon_src" : "https://drive.google.com/uc?id=1F7_TrhACZUu9fAE23yizevkkvVbrm4ig",
+    "comment" : "쿨그레이는 환한 분위기에요! 환한 분위기를 원하신다면, 탁월한 선택입니다."
+	}
+]

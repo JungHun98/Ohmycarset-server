@@ -1,0 +1,49 @@
+[
+	{
+		"id": 0,
+		"name" : "어비스 블랙펄",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1ZSeoqFhTy6fBMLBel7QtNJbGNM4D0xcZ",
+    "color_code" : "https://drive.google.com/uc?id=1c2arI8MR9-2R_dVAsuADhHHm2eXJ-CLN",
+    "comment": "어비스 블랙펄 색상은 희소성이 있어요! 독특한 색상을 원하신다면, 탁월한 선택입니다."
+	},
+	{
+		"id": 1,
+		"name" : "쉬머링 실버 메탈릭",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1CGJF7b7bBbp6T8kvrdkLEcPFXDwpc6f0",
+    "color_code" : "https://drive.google.com/uc?id=15M5BSSIcrU-1tc6wTZv80BIYGuxkoRCz",
+    "comment": "쉬머링 실버 메탈릭 색상은 희소성이 있어요! 독특한 색상을 원하신다면, 탁월한 선택입니다."
+	},{
+		"id": 2,
+		"name" : "문라이트 블루 펄",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1kOFM9qn2z68lt-0E8P_wMUbzpT6vmnpn",
+    "color_code" : "https://drive.google.com/uc?id=1rdOp1Zt6FzaIsHp6_teIbRTwQjlPfO-N",
+    "comment": "문라이트 블루 펄 색상은 희소성이 있어요! 독특한 색상을 원하신다면, 탁월한 선택입니다."
+	},
+	{
+		"id": 3,
+		"name" : "가이아 브라운 펄",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1nOU9tQ_t8lGf6yVpSq-V4SY2eMb6Lv7u",
+    "color_code" : "https://drive.google.com/uc?id=1WNj1FX-FbtFSMsVu8fhbGkFSqEW_Sw94",
+    "comment": "가이아 브라운 펄 색상은 인기가 많아요! 인기있는 색상을 원하신다면, 탁월한 선택입니다."
+	},
+      {
+		"id": 4,
+		"name" : "그라파이트 그레이 메탈릭",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1V54GaAiQIFrRppcCxpQQFwNdcFEq3O56",
+    "color_code" : "https://drive.google.com/uc?id=1YO-Lmq6lPnZpbUz55rqrk1YafyNKr87e",
+    "comment": "그라파이트 그레이 메탈릭 색상은 인기가 많아요! 인기있는 색상을 원하신다면, 탁월한 선택입니다."
+	},
+	{
+		"id": 5,
+		"name" : "크리미 화이트 펄",
+		"price" : 100000,
+		"image_src" : "https://drive.google.com/uc?id=1tsveO0atIdXZpYHW-DAjjmw3LgVEINU5",
+    "color_code" : "https://drive.google.com/uc?id=182g3uj6E4f4KXtx-vnlD0-9GbSRn0k0L",
+    "comment": "크리미 화이트 펄 색상은 가장 많이 판매됐어요! 가장 인기있는 색상을 원하신다면, 탁월한 선택입니다."
+	}
+]

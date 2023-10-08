@@ -1,0 +1,26 @@
+[
+  {
+		"id": 0,
+		"name" : "20인치 다크 스퍼터링 휠",
+		"price" : 840000,
+		"image_src" : "https://drive.google.com/uc?id=1fledlcc2BT0O5br7KT2b8oqIhkaUaIL6",
+    "parts_src" : "https://drive.google.com/uc?id=1N5uPg7bFy4Qszo04tM-nPapHTS7CDpFM",
+    "comment" : "20인치 다크 스퍼터링 휠은 깔끔한 디자인이에요! 세련되고 깔끔한 디자인을 원하신다면, 탁월한 선택입니다."
+	},
+	{
+		"id": 1,
+		"name" : "20인치 블랙톤 전면 가공 휠",
+		"price" : 640000,
+		"image_src" : "https://drive.google.com/uc?id=1LUwCioF0kKgLyGjlVEnzUIj1oF2ka4PP",
+    "parts_src" : "https://drive.google.com/uc?id=1N5uPg7bFy4Qszo04tM-nPapHTS7CDpFM",
+    "comment" : "20인치 블랙톤 전면 가공 휠은 무게감이 있어요! 무게감있는 디자인을 원하신다면, 탁월한 선택입니다."
+	},
+  {
+		"id": 2,
+		"name" : "알콘 단조 브레이크 & 20인치 휠 패키지지",
+		"price" : 3660000,
+		"image_src" : "https://drive.google.com/uc?id=1DfC4suMZhuby3HNsbmMUfr2mXug2hakU",
+    "parts_src" : "https://drive.google.com/uc?id=1N5uPg7bFy4Qszo04tM-nPapHTS7CDpFM",
+    "comment" : "알콘(alcon) 단조 브레이크 & 20인치 휠 패키지는 뛰어난 제동력이 강점이에요! 안전과 디자인을 모두 원하신다면, 탁월한 선택입니다."
+	}
+]

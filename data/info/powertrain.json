@@ -1,0 +1,17 @@
+[  
+  {
+    "id": 0,
+    "name": "디젤 2.2",
+    "price": 1480000,
+    "image_src": "https://drive.google.com/uc?id=1MJzeVrcfijHK35sK0Ks4ej-CAfonILC6",
+    "comment": "디젤 엔진은 효율이 좋아요! 효율을 중시한다면, 탁월한 선택입니다."
+  },
+  {
+    "id": 1,
+    "name": "가솔린",
+    "price": 0,
+    "image_src": "https://drive.google.com/uc?id=11FeLJtlVo7-E9DMPQozERVQhytysu_UT",
+    "comment": "가솔린 엔진은 조용해요! 조용한 주행을 원하신다면, 탁월한 선택입니다."
+  }
+]
+

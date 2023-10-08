@@ -1,0 +1,16 @@
+[
+	{
+		"id": 0,
+		"name" : "7인승",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1jo56bmgaRARUyiLoFoRUoMe8JipWNXaQ",
+    "comment": "통로가 있어 쾌적해요! 쾌적함을 원하신다면, 탁월한 선택입니다."
+  },
+	{
+		"id": 1,
+		"name" : "8인승",
+		"price" : 0,
+		"image_src" : "https://drive.google.com/uc?id=1pxuLXqA6sT0nXWoVfDGYjFiYnI4zEwDo",
+    "comment": "공간 활용을 원하신다면, 탁월한 선택입니다."     
+	}
+]

@@ -1,0 +1,93 @@
+[
+  {
+		"id": 0,
+		"name" : "현대스마트센스 1",
+		"price" : 790000,
+		"image_src" : "https://drive.google.com/uc?id=1cQ0VdOTIouMe6ikuw9KmjIx2j8Duw1tv",
+		"category" : "system"
+	},
+	{
+		"id": 1,
+		"name" : "주차보조 시스템2",
+		"price" : 690000,
+		"image_src" : "https://drive.google.com/uc?id=1_gWNvX60BWhfvHUJxvLVHE-dm1scmgQ2",
+		"category" : "system"
+	},
+  {
+		"id": 2,
+		"name" : "컴포트 2",
+		"price" : 1090000,
+		"image_src" : "https://drive.google.com/uc?id=1HrQzsewC3d40QD6uVgSG_izGFLYut9lf",
+		"category" : "system"
+	},
+	{
+		"id": 3,
+		"name" : "2열 통풍시트",
+		"price" : 400000,
+		"image_src" : "https://drive.google.com/uc?id=1pfjnGevmgdEsfAa_3vuRV70zfNM1cnn2",
+		"category" : "temperature"
+	},
+	{
+		"id": 4,
+		"name" : "적외선 무릎워머",
+		"price" : 300000,
+		"image_src" : "https://drive.google.com/uc?id=1T3mo-CI36bKiUbkHu2deBXkperb3TymO",
+		"parts_src" : "https://drive.google.com/uc?id=1UaDHSRtCzik049rv8_w3brzinwdUWSlJ",
+		"category" : "temperature"
+	},
+	{
+		"id": 5,
+		"name" : "사이드 스텝",
+		"price" : 350000,
+		"image_src" : "https://drive.google.com/uc?id=1zT_57qDExdq8YMXP-wrRDi4g2Yz4zFAz",
+		"parts_src" : "https://drive.google.com/uc?id=1UaDHSRtCzik049rv8_w3brzinwdUWSlJ",
+		"category" : "outer_device"
+	},
+	{
+		"id": 6,
+		"name" : "차량 보호 필름",
+		"price" : 490000,
+		"image_src" : "https://drive.google.com/uc?id=1qoNhWMfnf5Ey_NZ8zOR2Hquj8vTVrfdu",
+		"parts_src" : "https://drive.google.com/uc?id=1UaDHSRtCzik049rv8_w3brzinwdUWSlJ",
+		"category" : "outer_device"
+	},
+	{
+		"id": 7,
+		"name" : "듀얼 머플러 패키지",
+		"price" : 840000,
+		"image_src" : "https://drive.google.com/uc?id=1j_4YeTylGLpOk6MQYL7pnNmhZbx7zWe-",
+		"parts_src" : "https://drive.google.com/uc?id=1UaDHSRtCzik049rv8_w3brzinwdUWSlJ",
+		"category" : "outer_device"
+	},
+	{
+		"id": 8,
+		"name" : "듀얼 와이드 선루프",
+		"price" : 890000,
+		"image_src" : "https://drive.google.com/uc?id=1SS50KBwkjZ4M8FKWRiFTSV2vCXA9CD6s",
+		"category" : "inner_device"
+	},
+	{
+		"id": 9,
+		"name" : "빌트인 캠(보조배터리 포함)",
+		"price" : 690000,
+		"image_src" : "https://drive.google.com/uc?id=1_IwbaJio2L0AGyN0jeIPwOg4vaUQ5OxP",
+		"parts_src" : "https://drive.google.com/uc?id=1UaDHSRtCzik049rv8_w3brzinwdUWSlJ",
+		"category" : "inner_device"
+	},
+	{
+		"id": 10,
+		"name" : "프로텍션 매트패키지 1",
+		"price" : 250000,
+		"image_src" : "https://drive.google.com/uc?id=1Kv470YbuqL74wo55UF5-09RHt5SrbtFS",
+		"parts_src" : "https://drive.google.com/uc?id=1UaDHSRtCzik049rv8_w3brzinwdUWSlJ",
+		"category" : "inner_device"
+	},
+	{
+		"id": 11,
+		"name" : "빌트인 공기청정기",
+		"price" : 400000,
+		"image_src" : "https://drive.google.com/uc?id=1auvQ-_FKqExISBaBg6jdW68hE_BB2Xre",
+		"parts_src" : "https://drive.google.com/uc?id=1UaDHSRtCzik049rv8_w3brzinwdUWSlJ",
+		"category" : "inner_device"
+	}
+]

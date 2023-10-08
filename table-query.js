@@ -144,6 +144,7 @@ CREATE TABLE IF NOT EXISTS Wheel (
   parts_src TEXT,
   price INTEGER,
   image_src TEXT,
+  comment TEXT,
   flag TEXT,
   FOREIGN KEY (detail_id) REFERENCES Detail(id)
 );
