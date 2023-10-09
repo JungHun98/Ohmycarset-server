@@ -137,6 +137,14 @@ CREATE TABLE IF NOT EXISTS Detail (
   info TEXT
 );
 
+CREATE TABLE IF NOT EXISTS Additional_Detail (
+  id INTEGER PRIMARY KEY,
+  title TEXT,
+  description TEXT,
+  image_src TEXT,
+  option_id INTEGER
+);
+
 CREATE TABLE IF NOT EXISTS Wheel (
   id INTEGER PRIMARY KEY,
   name TEXT,
