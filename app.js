@@ -110,6 +110,33 @@ app.get('/detail/:category/:id', (req, res) => {
   }
 });
 
+app.get('/comment/:category/:id', (req, res) => {
+  const category = req.params.category;
+  const id = req.params.id;
+  const optionDataTable = categoryMap[category];
+  if(optionDataTable){
+    const query = `
+    SELECT comment
+    FROM ${optionDataTable} AS T
+    WHERE T.id = ${id}`
+
+    db.get(query, (err, row) => {
+      if (err) {
+        res.status(500).json({
+          error: err.message, // 클라이언트에게 에러 응답 전송
+        });
+      }
+      res.json({
+        data: row,
+        message: "success"
+      });
+    });
+  }
+  else{
+    res.status(500);
+  }
+});
+
 app.listen(port, () => {
   console.log(`서버가 http://localhost:${port} 에서 실행 중입니다.`);
 });
