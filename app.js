@@ -5,17 +5,17 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
-let db = new sqlite3.Database('./db/main.db');
+const db = new sqlite3.Database('./db/main.db');
 
 app.use(cors());
 
-function snakeToCamel(str) {
-  return str.replace(/_([a-z])/g, function (match, letter) {
+const snakeToCamel = (str) => {
+  return str.replace(/_([a-z])/g, (match, letter) => {
     return letter.toUpperCase();
   });
 }
 
-function formatData(obj){
+const formatData = (obj) => {
   const formatbject = obj.map((row) => {
     const cardData = {};
     for (const key in row) {
@@ -30,30 +30,45 @@ function formatData(obj){
   return formatbject;
 }
 
-
-app.get('/info/:category', (req, res) => {
-  const categoryMap = {
-    "powertrain" : "Powertrain",
-    "driving-system" : "Driving_System",
-    "bodytype" : "Bodytype",
-    "interior-color" : "Interior_Color",
-    "exterior-color" : "Exterior_Color",
-    "wheel" : "Wheel"
-  }
-  const category = req.params.category;
-  const query = `SELECT * FROM ${categoryMap[category]}`;
-
-  db.all(query, [], (err, rows) => {
+const searchDB = (resolve, reject, query, dbParams) => {
+  db.all(query, dbParams, (err, rows) => {
     if (err) {
-      res.status(500).json({ error: err.message });
+      reject(err);
       return;
     }
+    resolve(rows);
+  });
+};
 
-    const data = formatData(rows);
+const getSearchDBPromise = (category, queryParam) => {
+  const categoryMap = {
+    "powertrain": "Powertrain",
+    "driving-system": "Driving_System",
+    "bodytype": "Bodytype",
+    "interior-color": "Interior_Color",
+    "exterior-color": "Exterior_Color",
+    "wheel": "Wheel",
+    "additional-option": "Additional_Option"
+  }
 
+  const query = `SELECT * FROM ${categoryMap[category]}${queryParam ? ' WHERE category = ?' : ''}`;
+  console.log(query);
+  const dbParams = queryParam ? [queryParam] : [];
+
+  return new Promise((resolve, reject) => {
+      searchDB(resolve, reject, query, dbParams);
+  });
+}
+
+app.get('/info/:category', (req, res) => {
+  const category = req.params.category;
+  const queryParam = req.query.category;
+
+  const promise = getSearchDBPromise(category, queryParam);
+  promise.then((result) => {
     res.json({
-      data: data,
-      message: 'success',
+      data: formatData(result),
+      message: "success"
     });
   });
 });
