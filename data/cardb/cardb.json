@@ -1,0 +1,52 @@
+[
+  {
+    "keyword" : "트림",
+    "description" : "트림(trim)이란, 자동차 한 모델 안에서의 등급을 말해요. 자동차 트림에 따라 선택할 수 있는 편의사양과 옵션등이 정해져요.",
+    "image_src" : ""
+  },
+  {
+    "keyword" : "스티어링 휠",
+    "description" : "운전대 또는 핸들을 말해요.",
+    "image_src" : "http://kids.hyundai.com/upload/image/FU/201704/170425_car_img02.png"
+  },
+  {
+    "keyword" : "파워트레인",
+    "description" : "엔진에서 구동바퀴사이의 모든 기관을 지칭하는 말이에요. 자동차 플랫폼과 비슷한 뜻이에요.",
+    "image_src" : ""
+  },
+  {
+    "keyword" : "머플러",
+    "description" : "엔진에서 발생한 배기가스를 차 밖으로 배출하는 장치에요.",
+    "image_src" : "http://kids.hyundai.com/upload/image/FU/201704/170425_car_img06.png"
+  },
+  {
+    "keyword" : "토크",
+    "description" : "자동차의 동력이 엔진 축에 순간적으로 전달되는 힘이에요. 가속 성능, 연비, 엔진 효율에 영향을 줘요.",
+    "image_src" : ""
+  },
+  {
+    "keyword" : "연비",
+    "description" : "연비는 자동차가 1L의 연료로 얼마나 멀리 주행할 수 있는지를 나타낸 수치에요. 연비가 높을수록 적은 기름으로 오래 달릴 수 있어요.",
+    "image_src" : ""
+  },
+  {
+    "keyword" : "대향차",
+    "description" : "외길에서, 반대 방향에서 달려오는 차를 말해요. 너무 위험하겠죠?",
+    "image_src" : "https://www.hyundai.co.kr/image/upload/asset_library/MDA00000000000016294/e1b2310c1eaf412e8ace40f4bd11bcf8.png"
+  },
+  {
+    "keyword" : "윈드실드",
+    "description" : "흔히 프런트 글라스 또는 앞창이라고 불러요. 공기 저항을 적게 하기 위해서 최근에는 경사가 아주 완만해졌어요.",
+    "image_src" : ""
+  },
+  {
+    "keyword" : "구동방식",
+    "description" : "엔진에서 발생하는 동력이 바퀴에 전달되어 자동차가 움직이는 방식을 말해요. 동력은 전달받은 바퀴 개수에 따라 '2WD'와 '4WD'로 나뉘어요.",
+    "image_src" : "https://kids.hyundai.com/kidshyundai/AutomobileManagement/learnauto/automobileDet.kids?ctgrMgrpCd=&cotnSn=3304"
+  },
+  {
+    "keyword" : "단조 소재",
+    "description" : "금속이 고압 하에서 고 강도 부품으로 소성변형(재료의 탄성한계를 넘어섰을 때 영구적인 변형의 부분)을 하여 성형되는 제조공법이에요.",
+    "image_src" : ""
+  }
+]
