@@ -1,0 +1,141 @@
+{
+  "powertrain": [
+    {
+      "id" : 0,
+      "selectionRatio": 82
+    },
+    {
+      "id" : 1,
+      "selectionRatio": 18
+    }
+  ],
+  "driving-system": [
+    {
+      "id" : 0,
+      "selectionRatio": 81
+    },
+    {
+      "id" : 1,
+      "selectionRatio": 19
+    }
+  ],
+  "bodytype": [
+    {
+      "id" : 0,
+      "selectionRatio": 54
+    },
+    {
+      "id" : 1,
+      "selectionRatio": 46
+    }
+  ],
+  "exterior-color": [
+    {
+      "id" : 0,
+      "selectionRatio": 27
+    },
+    {
+      "id" : 1,
+      "selectionRatio": 3
+    },
+    {
+      "id" : 2,
+      "selectionRatio": 0
+    },
+    {
+      "id" : 3,
+      "selectionRatio": 0
+    },
+    {
+      "id" : 4,
+      "selectionRatio": 1
+    },
+    {
+      "id" : 5,
+      "selectionRatio": 69
+    }
+  ],
+  "interior-color": [
+    {
+      "id" : 0,
+      "selectionRatio": 61
+    },
+    {
+      "id" : 1,
+      "selectionRatio": 39
+    }
+  ],
+  "wheel" : [
+    {
+      "id" : 0,
+      "selectionRatio": 72
+    },
+    {
+      "id" : 1,
+      "selectionRatio": 27
+    },
+    {
+      "id" : 2,
+      "selectionRatio": 1
+    }
+  ],
+  "additional-option": {
+    "system" : [
+      {
+        "id" : 0,
+        "selectionRatio": 31
+      },
+      {
+        "id" : 1,
+        "selectionRatio": 25
+      },
+      {
+        "id" : 2,
+        "selectionRatio": 18
+      }
+    ],
+    "temperature" : [
+      {
+        "id" : 3,
+        "selectionRatio": 9
+      },
+      {
+        "id" : 4,
+        "selectionRatio": 7
+      }
+    ],
+    "outer_device" : [
+      {
+        "id" : 5,
+        "selectionRatio": 13
+      },
+      {
+        "id" : 6,
+        "selectionRatio": 3
+      },
+      {
+        "id" : 7,
+        "selectionRatio": 0
+      }
+    ],
+    "inner_device" :
+    [
+      {
+        "id" : 8,
+        "selectionRatio": 22
+      },
+      {
+        "id" : 9,
+        "selectionRatio": 17
+      },
+      {
+        "id" : 10,
+        "selectionRatio": 11
+      },
+      {
+        "id" : 11,
+        "selectionRatio": 3
+      }
+    ]
+  }
+}
