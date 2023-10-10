@@ -19,6 +19,27 @@ const categoryMap = {
   "additional-option": "Additional_Option"
 }
 
+const sendResponse = (res, data) => {
+  res.json({
+    data: data,
+    message: "success"
+  });
+}
+
+const sendError = (res, err) => {
+  res.status(500).json({
+    error: err.message, // 클라이언트에게 에러 응답 전송
+  });
+}
+
+const handleResponse = (res, err, data) => {
+  if (err) {
+    sendError(res, err);
+    return;
+  }
+  sendResponse(res, data);
+}
+
 const snakeToCamel = (str) => {
   return str.replace(/_([a-z])/g, (match, letter) => {
     return letter.toUpperCase();
@@ -46,16 +67,7 @@ app.get('/info/:category', (req, res) => {
   const query = `SELECT * FROM ${categoryMap[category]}${queryParam ? ` WHERE category = "${queryParam}"` : ''}`;
 
   db.all(query, [], (err, rows) => {
-    if (err) {
-      res.status(500).json({
-        error: err.message, // 클라이언트에게 에러 응답 전송
-      });
-      return;
-    }
-    res.json({
-      data: formatData(rows),
-      message: "success"
-    })    
+    handleResponse(res, err, formatData(rows));
   });
 });
 
@@ -65,16 +77,7 @@ app.get('/info/:category/:id', (req, res) => {
   const query = `SELECT id, name, image_src as imageSrc, price FROM ${categoryMap[category]} WHERE id = ${id}`;
 
   db.get(query, (err, row) => {
-    if (err) {
-      res.status(500).json({
-        error: err.message, // 클라이언트에게 에러 응답 전송
-      });
-      return;
-    }
-    res.json({
-      data: row,
-      message: "success"
-    })    
+    handleResponse(res, err, row);    
   });
 });
 
@@ -85,15 +88,7 @@ const sendAddtionalDetail = (id, resObject) => {
   WHERE option_id = ${id}`;
 
   db.all(query, [], (err, rows) => {
-    if (err) {
-      resObject.status(500).json({
-        error: err.message, // 클라이언트에게 에러 응답 전송
-      });
-    }
-    resObject.json({
-      data: formatData(rows),
-      message: "success"
-    });
+    handleResponse(resObject, err, formatData(rows));
   });
 }
 
@@ -105,15 +100,7 @@ const sendOptionDetail = (table, id, resObject) => {
   WHERE T.id = ${id}`;
 
   db.get(query, (err, row) => {
-    if (err) {
-      resObject.status(500).json({
-        error: err.message, // 클라이언트에게 에러 응답 전송
-      });
-    }
-    resObject.json({
-      data: row,
-      message: "success"
-    });
+    handleResponse(resObject, err, row);
   });
 }
 
@@ -125,7 +112,7 @@ app.get('/detail/:category/:id', (req, res) => {
     optionDataTable === "Additional_Option" ? sendAddtionalDetail(id, res) : sendOptionDetail(optionDataTable, id, res);
   }
   else{
-    res.status(500);
+    sendError(res, err);
   }
 });
 
@@ -140,19 +127,11 @@ app.get('/comment/:category/:id', (req, res) => {
     WHERE T.id = ${id}`
 
     db.get(query, (err, row) => {
-      if (err) {
-        res.status(500).json({
-          error: err.message, // 클라이언트에게 에러 응답 전송
-        });
-      }
-      res.json({
-        data: row,
-        message: "success"
-      });
+      handleResponse(res, err, row);
     });
   }
   else{
-    res.status(500);
+    sendError(res, err);
   }
 });
 
@@ -163,10 +142,7 @@ app.get('/sale/:category/select', (req, res) => {
   import(`./data/select/select.json`, { assert: { type: "json" }}).then((response) => {
     const data = queryParam ? response.default[category][queryParam] : response.default[category];
     
-    res.json({
-      data: data,
-      message: "success"
-    });
+    sendResponse(res, data);
   })
 });
 
@@ -180,25 +156,16 @@ app.get('/cardb', (req, res) => {
     WHERE T.keyword = "${queryParam}"`
 
     db.get(query, (err, row) => {
-      if (err) {
-        res.status(500).json({
-          error: err.message, // 클라이언트에게 에러 응답 전송
-        });
+      const data = {
+        "keyword" : row.keyword,
+        "description" : row.description,
+        "imageSrc" : row.image_src
       }
-      res.json({
-        data: {
-          "keyword" : row.keyword,
-          "description" : row.description,
-          "imageSrc" : row.image_src
-        },
-        message: "success"
-      });
+      handleResponse(res, err, data);
     });
   }
   else{
-    res.status(500).json({
-      error: "카워드 다시 보내줘요."
-    });
+    sendError(res, err);
   }
 });
 
@@ -220,11 +187,6 @@ app.get('/guide/tag', (req, res) => {
   ];
   
   db.all(query, [], (err, rows) => {
-    if (err) {
-      res.status(500).json({
-        error: err.message, // 클라이언트에게 에러 응답 전송
-      });
-    }
     let temp = 0;
     const result = categorys.map((elem) => {
       const newObect = {
@@ -235,11 +197,7 @@ app.get('/guide/tag', (req, res) => {
 
       return newObect;
     });
-
-    res.json({
-      data: result,
-      message: "success"
-    });
+    handleResponse(res, err, result);
   });
 });
 
