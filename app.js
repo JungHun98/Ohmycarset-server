@@ -151,6 +151,79 @@ app.get('/sale/:category/select', (req, res) => {
   })
 });
 
+app.get('/cardb', (req, res) => {
+  const queryParam = req.query.keyword;
+
+  if(queryParam){
+    const query = `
+    SELECT keyword, description, image_src
+    FROM Cardb AS T
+    WHERE T.keyword = "${queryParam}"`
+
+    db.get(query, (err, row) => {
+      if (err) {
+        res.status(500).json({
+          error: err.message, // 클라이언트에게 에러 응답 전송
+        });
+      }
+      res.json({
+        data: {
+          "keyword" : row.keyword,
+          "description" : row.description,
+          "imageSrc" : row.image_src
+        },
+        message: "success"
+      });
+    });
+  }
+  else{
+    res.status(500).json({
+      error: "카워드 다시 보내줘요."
+    });
+  }
+});
+
+app.get('/guide/tag', (req, res) => {
+  const query = `SELECT * FROM Tag`;
+  const categorys = [
+    {
+      title: "내 차는 이런 부분에서 강했으면 좋겠어요",
+      keywordNum : 4
+    },
+    {
+      title: "나는 차를 탈 때 이런게 중요해요",
+      keywordNum : 6
+    },
+    {
+      title: "나는 차를 이렇게 활용하고 싶어요",
+      keywordNum : 2
+    }
+  ];
+  
+  db.all(query, [], (err, rows) => {
+    if (err) {
+      res.status(500).json({
+        error: err.message, // 클라이언트에게 에러 응답 전송
+      });
+    }
+    let temp = 0;
+    const result = categorys.map((elem) => {
+      const newObect = {
+        category: elem.title,
+        tags: rows.slice(temp, temp + elem.keywordNum)
+      }
+      temp += elem.keywordNum;
+
+      return newObect;
+    });
+
+    res.json({
+      data: result,
+      message: "success"
+    });
+  });
+});
+
 app.listen(port, () => {
   console.log(`서버가 http://localhost:${port} 에서 실행 중입니다.`);
 });
