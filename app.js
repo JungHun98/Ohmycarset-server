@@ -137,6 +137,20 @@ app.get('/comment/:category/:id', (req, res) => {
   }
 });
 
+app.get('/sale/:category/select', (req, res) => {
+  const category = req.params.category;
+  const queryParam = req.query.category;
+
+  import(`./data/select/select.json`, { assert: { type: "json" }}).then((response) => {
+    const data = queryParam ? response.default[category][queryParam] : response.default[category];
+    
+    res.json({
+      data: data,
+      message: "success"
+    });
+  })
+});
+
 app.listen(port, () => {
   console.log(`서버가 http://localhost:${port} 에서 실행 중입니다.`);
 });
