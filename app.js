@@ -59,6 +59,25 @@ app.get('/info/:category', (req, res) => {
   });
 });
 
+app.get('/info/:category/:id', (req, res) => {
+  const category = req.params.category;
+  const id = req.params.id;
+  const query = `SELECT id, name, image_src as imageSrc, price FROM ${categoryMap[category]} WHERE id = ${id}`;
+
+  db.get(query, (err, row) => {
+    if (err) {
+      res.status(500).json({
+        error: err.message, // 클라이언트에게 에러 응답 전송
+      });
+      return;
+    }
+    res.json({
+      data: row,
+      message: "success"
+    })    
+  });
+});
+
 const sendAddtionalDetail = (id, resObject) => {
   const query = `
   SELECT title, description, image_src
