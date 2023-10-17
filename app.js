@@ -8,6 +8,7 @@ const port = 3001;
 const db = new sqlite3.Database('./db/main.db');
 
 app.use(cors());
+app.use(express.json({ type: ['application/json', 'application/csp-report']}));
 
 const categoryMap = {
   "powertrain": "Powertrain",
@@ -167,6 +168,25 @@ app.get('/cardb', (req, res) => {
   else{
     sendError(res, err);
   }
+});
+
+app.post('/guide', (req, res) => {
+  function getRandom(min, max)
+  {
+	  return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  let responseObject = {
+    powertrainId: getRandom(0, 1),
+    drivingSystemId: getRandom(0, 1),
+    bodytypeId: getRandom(0, 1),
+    exteriorColorId: getRandom(0, 6),
+    interiorColorId: getRandom(0, 1),
+    wheelId: getRandom(0, 3),
+    additionalOptionId: [getRandom(0, 2), getRandom(3, 4),getRandom(5, 7), getRandom(8, 11)]
+  }
+  
+  handleResponse(res, false, responseObject);
 });
 
 app.get('/guide/tag', (req, res) => {
