@@ -62,6 +62,10 @@ const formatData = (obj) => {
   return formatbject;
 }
 
+const getRandom = (min, max) => {
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 app.get('/info/:category', (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
@@ -147,6 +151,17 @@ app.get('/sale/:category/select', (req, res) => {
   })
 });
 
+app.post('/sale/:category/tag', (req, res) => {
+  const category = req.params.category;
+  const queryParam = req.query.category;
+
+  import(`./data/select/select.json`, { assert: { type: "json" }}).then((response) => {
+    const data = queryParam ? response.default[category][queryParam] : response.default[category];
+    
+    sendResponse(res, data);
+  })
+});
+
 app.get('/cardb', (req, res) => {
   const queryParam = req.query.keyword;
 
@@ -171,10 +186,6 @@ app.get('/cardb', (req, res) => {
 });
 
 app.post('/guide', (req, res) => {
-  function getRandom(min, max)
-  {
-	  return Math.floor(Math.random() * (max - min + 1) + min);
-  }
 
   let responseObject = {
     powertrainId: getRandom(0, 1),
