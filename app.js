@@ -66,6 +66,10 @@ const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
+app.get("/", (req, res) => {
+  res.send("Hey this is my API running 🥳");
+});
+
 app.get("/info/:category", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
@@ -146,7 +150,7 @@ app.get("/sale/:category/select", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
 
-  import(`../data/select/select.json`, { assert: { type: "json" } }).then(
+  import(`./data/select/select.json`, { assert: { type: "json" } }).then(
     (response) => {
       const data = queryParam
         ? response.default[category][queryParam]
@@ -161,7 +165,7 @@ app.post("/sale/:category/tag", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
 
-  import(`../data/select/select.json`, { assert: { type: "json" } }).then(
+  import(`./data/select/select.json`, { assert: { type: "json" } }).then(
     (response) => {
       const data = queryParam
         ? response.default[category][queryParam]
