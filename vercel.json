@@ -3,13 +3,17 @@
   "builds": [
     {
       "src": "app.js",
-      "use": "@now/node"
+      "use": "@now/node-server"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.js"
+      "dest": "app.js",
+      "methods": ["POST", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ]
 }
