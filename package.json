@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node app.js",
-    "install": "npm ci --production"
+    "install": "npm ci --omit=dev"
   },
   "dependencies": {
     "cors": "^2.8.5",
