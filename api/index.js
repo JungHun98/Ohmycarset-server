@@ -1,9 +1,10 @@
 const sqlite3 = require("sqlite3").verbose();
+const db = new sqlite3.Database("./db/main.db");
+
 const express = require("express");
 const cors = require("cors");
 
 const app = express.Router();
-const db = new sqlite3.Database("./db/main.db");
 
 app.use(cors());
 app.use(express.json({ type: ["application/json", "application/csp-report"] }));
@@ -148,7 +149,7 @@ app.get("/sale/:category/select", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
 
-  import(`./data/select/select.json`, { assert: { type: "json" } }).then(
+  import(`../data/select/select.json`, { assert: { type: "json" } }).then(
     (response) => {
       const data = queryParam
         ? response.default[category][queryParam]
@@ -163,7 +164,7 @@ app.post("/sale/:category/tag", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
 
-  import(`./data/select/select.json`, { assert: { type: "json" } }).then(
+  import(`../data/select/select.json`, { assert: { type: "json" } }).then(
     (response) => {
       const data = queryParam
         ? response.default[category][queryParam]
