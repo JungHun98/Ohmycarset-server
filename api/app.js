@@ -66,11 +66,11 @@ const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Hey this is my API running 🥳");
 });
 
-app.get("/info/:category", (req, res) => {
+app.get("/api/info/:category", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
   const query = `SELECT * FROM ${categoryMap[category]}${
@@ -82,7 +82,7 @@ app.get("/info/:category", (req, res) => {
   });
 });
 
-app.get("/info/:category/:id", (req, res) => {
+app.get("/api/info/:category/:id", (req, res) => {
   const category = req.params.category;
   const id = req.params.id;
   const query = `SELECT id, name, image_src as imageSrc, price FROM ${categoryMap[category]} WHERE id = ${id}`;
@@ -115,7 +115,7 @@ const sendOptionDetail = (table, id, resObject) => {
   });
 };
 
-app.get("/detail/:category/:id", (req, res) => {
+app.get("/api/detail/:category/:id", (req, res) => {
   const category = req.params.category;
   const id = req.params.id;
   const optionDataTable = categoryMap[category];
@@ -128,7 +128,7 @@ app.get("/detail/:category/:id", (req, res) => {
   }
 });
 
-app.get("/comment/:category/:id", (req, res) => {
+app.get("/api/comment/:category/:id", (req, res) => {
   const category = req.params.category;
   const id = req.params.id;
   const optionDataTable = categoryMap[category];
@@ -146,7 +146,7 @@ app.get("/comment/:category/:id", (req, res) => {
   }
 });
 
-app.get("/sale/:category/select", (req, res) => {
+app.get("/api/sale/:category/select", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
 
@@ -161,7 +161,7 @@ app.get("/sale/:category/select", (req, res) => {
   );
 });
 
-app.post("/sale/:category/tag", (req, res) => {
+app.post("/api/sale/:category/tag", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
 
@@ -176,7 +176,7 @@ app.post("/sale/:category/tag", (req, res) => {
   );
 });
 
-app.get("/cardb", (req, res) => {
+app.get("/api/cardb", (req, res) => {
   const queryParam = req.query.keyword;
 
   if (queryParam) {
@@ -198,7 +198,7 @@ app.get("/cardb", (req, res) => {
   }
 });
 
-app.post("/guide", (req, res) => {
+app.post("/api/guide", (req, res) => {
   let responseObject = {
     powertrainId: getRandom(0, 1),
     drivingSystemId: getRandom(0, 1),
@@ -217,7 +217,7 @@ app.post("/guide", (req, res) => {
   handleResponse(res, false, responseObject);
 });
 
-app.get("/guide/tag", (req, res) => {
+app.get("/api/guide/tag", (req, res) => {
   const query = `SELECT * FROM Tag`;
   const categorys = [
     {
