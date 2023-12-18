@@ -1,7 +1,6 @@
 {
   "scripts": {
     "start": "node app.js",
-    "build": "webpack",
     "install": "npm ci --production"
   },
   "dependencies": {
