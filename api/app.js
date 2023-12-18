@@ -150,7 +150,7 @@ app.get("/sale/:category/select", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
 
-  import(`./data/select/select.json`, { assert: { type: "json" } }).then(
+  import(`../data/select/select.json`, { assert: { type: "json" } }).then(
     (response) => {
       const data = queryParam
         ? response.default[category][queryParam]
@@ -165,7 +165,7 @@ app.post("/sale/:category/tag", (req, res) => {
   const category = req.params.category;
   const queryParam = req.query.category;
 
-  import(`./data/select/select.json`, { assert: { type: "json" } }).then(
+  import(`../data/select/select.json`, { assert: { type: "json" } }).then(
     (response) => {
       const data = queryParam
         ? response.default[category][queryParam]
