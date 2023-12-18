@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "node api/app.js"
+    "start": "node api/app.js",
+    "build": "webpack"
   },
   "dependencies": {
     "cors": "^2.8.5",
