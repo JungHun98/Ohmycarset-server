@@ -1,9 +1,3 @@
 {
-  "build": {
-    "functions": {
-      "output": "/vercel/functions",
-      "package": "vercel/functions"
-    }
-  },
   "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
