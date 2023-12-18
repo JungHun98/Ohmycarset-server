@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "install": "npm ci --omit=dev",
     "start": "node app.js"
   },
   "dependencies": {
